@@ -1,4 +1,4 @@
-// Scroll animation for sections
+// scroll animation for sections
 document.addEventListener('DOMContentLoaded', () => {
   const sections = document.querySelectorAll('section');
   const observerOptions = {
@@ -20,3 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(section);
   });
 });
+
+// Function to toggle the side navigation bar
+function toggleNav() {
+  const sideNav = document.getElementById('sideNav');
+  const overlay = document.querySelector('.overlay');
+  const body = document.body;
+  
+  sideNav.classList.toggle('open');
+  overlay.classList.toggle('active');
+  body.classList.toggle('nav-open');
+}
